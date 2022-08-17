@@ -37,6 +37,7 @@ let
       mkdir -p $out
       cd $out
       pigz -dc $src | tar xf -
+      ln -s $out/bin/carla-${version} $out/bin/carla
     '';
 
     postFixup = ''
